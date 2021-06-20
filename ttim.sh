@@ -4,12 +4,10 @@ echo New file or existing?
 
 read varresponse
 
-if [[ $varresponse = new ]]; then 
-	echo file name?
+if [[ $varresponse = new ]]; echo file name?
 read varfilename
 read varinput
-	elif [[ $varresponse = existing ]]; then
-	echo Where is the located?
+	elif [[ $varresponse = existing ]]; echo Where is the located?
 read vardir
 	less $vardir
 fi
@@ -18,8 +16,7 @@ read varopts
 
 if [[ $varopts = end ]]; echo "$varinput" >> $varfilename;
 	exit 0
-	elif [[ $varopts = continue ]]; then
-read varextrainputs
+	elif [[ $varopts = continue ]]; read varextrainputs
 
 fi
 
