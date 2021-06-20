@@ -7,7 +7,7 @@ read varresponse
 if [[ $varresponse = new ]]; echo file name?
 read varfilename
 read varinput
-	elif [[ $varresponse = existing ]]; echo Where is the located?
+	elif [[ $varresponse = existing ]]; echo Where is the file located?
 read vardir
 	less $vardir
 fi
