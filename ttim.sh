@@ -11,13 +11,12 @@ read varinput
 	elif [[ $varresponse = existing ]]; then
 	echo Where is the located?
 read vardir
-	echo $vardir
+	less $vardir
 fi
 
 read varopts
 
-if [[ $varopts = end ]]; then
-echo "$varinput" >> $varfilename;
+if [[ $varopts = end ]]; echo "$varinput" >> $varfilename;
 	exit 0
 	elif [[ $varopts = continue ]]; then
 read varextrainputs
